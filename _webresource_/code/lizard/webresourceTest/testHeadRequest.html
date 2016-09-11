@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<div id="context"></div>
+<script type="text/javascript">
+    var xmlHttp;
+    var requestType="";
+    var context=document.getElementById('context');
+    function createXMLHttpRequest() {
+        if (window.ActiveXObject) {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } else if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        }
+    }
+    function doHeaderRequest(request,url) {
+        requestType=request;
+        createXMLHttpRequest();
+        xmlHttp.onreadystatechange=handleStateChange;
+        xmlHttp.open("HEAD",url,true);
+        xmlHttp.setRequestHeader('Cache-Control','no-cache');
+        xmlHttp.setRequestHeader('Content-Type','text/plain');
+        xmlHttp.send(null);
+    }
+    //doHeaderRequest("allResponseHeaders","http://webresource.uat.qa.nt.ctripcorp.com/code/lizard/2.1/web/lizard.seed.js");
+//    doHeaderRequest("allResponseHeaders","http://webresource.fws.qa.nt.ctripcorp.com/code/lizard/2.1/web/lizard.seed.js");
+
+    setInterval(function(){
+        doHeaderRequest("allResponseHeaders","http://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js?v=012356235623");
+    },2000);
+    function handleStateChange() {
+        if(xmlHttp.readyState==4) {
+            if(requestType=="allResponseHeaders") {
+                getAllResponseHeaders();
+            }
+            else if(requestType=="lastModified") {
+                getLastModified();
+            }
+            else if(requestType=="isResourceAvailable") {
+                getIsResourceAvailable();
+            }
+        }
+    }
+    function getAllResponseHeaders() {
+        console.log();
+        var div=document.createElement('div');
+        div.textContent=xmlHttp.getAllResponseHeaders();
+        context.appendChild(div);
+
+    }
+    function getLastModified() {
+        var div=document.createElement('div');
+        div.textContent=xmlHttp.getResponseHeader("Last-Modified");
+        context.appendChild(div);
+        console.log("Last Modified: "+xmlHttp.getResponseHeader("Last-Modified"));
+    }
+    function getIsResourceAvailable() {
+        if (xmlHttp.status == 200) {
+            console.log("Successful response");
+        }
+    }
+</script>
+</body>
+</html>

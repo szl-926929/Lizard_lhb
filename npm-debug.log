@@ -1,0 +1,816 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\Appium\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\Appium\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.6
+3 info using node@v0.10.26
+4 verbose node symlink C:\Program Files (x86)\Appium\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'E:\\Lizard',
+6 verbose install   [ '@ctrip/crn',
+6 verbose install     'react',
+6 verbose install     'react-native',
+6 verbose install     'react-redux',
+6 verbose install     'redux',
+6 verbose install     'redux-thunk',
+6 verbose install     'redux-logger' ] ]
+7 info preinstall hotelrn@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ '@ctrip/crn@0.0.52', null ]
+10 verbose cache add name=undefined spec="@ctrip/crn@0.0.52" args=["@ctrip/crn@0.0.52",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: '@ctrip/crn@0.0.52',
+11 verbose parsed url   path: '@ctrip/crn@0.0.52',
+11 verbose parsed url   href: '@ctrip/crn@0.0.52' }
+12 verbose cache add [ 'react@^15.1.0', null ]
+13 verbose cache add name=undefined spec="react@^15.1.0" args=["react@^15.1.0",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'react@^15.1.0',
+14 verbose parsed url   path: 'react@^15.1.0',
+14 verbose parsed url   href: 'react@^15.1.0' }
+15 verbose cache add name="react" spec="^15.1.0" args=["react","^15.1.0"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '^15.1.0',
+16 verbose parsed url   path: '^15.1.0',
+16 verbose parsed url   href: '^15.1.0' }
+17 verbose addNamed [ 'react', '^15.1.0' ]
+18 verbose addNamed [ null, '>=15.1.0-0 <16.0.0-0' ]
+19 verbose cache add [ 'react-native@^0.28.0', null ]
+20 verbose cache add name=undefined spec="react-native@^0.28.0" args=["react-native@^0.28.0",null]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'react-native@^0.28.0',
+21 verbose parsed url   path: 'react-native@^0.28.0',
+21 verbose parsed url   href: 'react-native@^0.28.0' }
+22 verbose cache add name="react-native" spec="^0.28.0" args=["react-native","^0.28.0"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: '^0.28.0',
+23 verbose parsed url   path: '^0.28.0',
+23 verbose parsed url   href: '^0.28.0' }
+24 verbose addNamed [ 'react-native', '^0.28.0' ]
+25 verbose addNamed [ null, '>=0.28.0-0 <0.29.0-0' ]
+26 verbose cache add [ 'react-redux@^4.4.5', null ]
+27 verbose cache add name=undefined spec="react-redux@^4.4.5" args=["react-redux@^4.4.5",null]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: 'react-redux@^4.4.5',
+28 verbose parsed url   path: 'react-redux@^4.4.5',
+28 verbose parsed url   href: 'react-redux@^4.4.5' }
+29 verbose cache add name="react-redux" spec="^4.4.5" args=["react-redux","^4.4.5"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '^4.4.5',
+30 verbose parsed url   path: '^4.4.5',
+30 verbose parsed url   href: '^4.4.5' }
+31 verbose addNamed [ 'react-redux', '^4.4.5' ]
+32 verbose addNamed [ null, '>=4.4.5-0 <5.0.0-0' ]
+33 verbose cache add name="" spec="ctrip/crn@0.0.52" args=["","ctrip/crn@0.0.52"]
+34 verbose parsed url { protocol: null,
+34 verbose parsed url   slashes: null,
+34 verbose parsed url   auth: null,
+34 verbose parsed url   host: null,
+34 verbose parsed url   port: null,
+34 verbose parsed url   hostname: null,
+34 verbose parsed url   hash: null,
+34 verbose parsed url   search: null,
+34 verbose parsed url   query: null,
+34 verbose parsed url   pathname: 'ctrip/crn@0.0.52',
+34 verbose parsed url   path: 'ctrip/crn@0.0.52',
+34 verbose parsed url   href: 'ctrip/crn@0.0.52' }
+35 silly lockFile 1469480c-react-15-1-0 react@^15.1.0
+36 verbose lock react@^15.1.0 d:\Users\luhb\AppData\Roaming\npm-cache\1469480c-react-15-1-0.lock
+37 silly lockFile 790af823-react-native-0-28-0 react-native@^0.28.0
+38 verbose lock react-native@^0.28.0 d:\Users\luhb\AppData\Roaming\npm-cache\790af823-react-native-0-28-0.lock
+39 silly lockFile 7d70ed6f-react-redux-4-4-5 react-redux@^4.4.5
+40 verbose lock react-redux@^4.4.5 d:\Users\luhb\AppData\Roaming\npm-cache\7d70ed6f-react-redux-4-4-5.lock
+41 verbose cache add [ 'redux@^3.5.2', null ]
+42 verbose cache add name=undefined spec="redux@^3.5.2" args=["redux@^3.5.2",null]
+43 verbose parsed url { protocol: null,
+43 verbose parsed url   slashes: null,
+43 verbose parsed url   auth: null,
+43 verbose parsed url   host: null,
+43 verbose parsed url   port: null,
+43 verbose parsed url   hostname: null,
+43 verbose parsed url   hash: null,
+43 verbose parsed url   search: null,
+43 verbose parsed url   query: null,
+43 verbose parsed url   pathname: 'redux@^3.5.2',
+43 verbose parsed url   path: 'redux@^3.5.2',
+43 verbose parsed url   href: 'redux@^3.5.2' }
+44 verbose cache add name="redux" spec="^3.5.2" args=["redux","^3.5.2"]
+45 verbose parsed url { protocol: null,
+45 verbose parsed url   slashes: null,
+45 verbose parsed url   auth: null,
+45 verbose parsed url   host: null,
+45 verbose parsed url   port: null,
+45 verbose parsed url   hostname: null,
+45 verbose parsed url   hash: null,
+45 verbose parsed url   search: null,
+45 verbose parsed url   query: null,
+45 verbose parsed url   pathname: '^3.5.2',
+45 verbose parsed url   path: '^3.5.2',
+45 verbose parsed url   href: '^3.5.2' }
+46 verbose addNamed [ 'redux', '^3.5.2' ]
+47 verbose addNamed [ null, '>=3.5.2-0 <4.0.0-0' ]
+48 silly lockFile d9a05fab-redux-3-5-2 redux@^3.5.2
+49 verbose lock redux@^3.5.2 d:\Users\luhb\AppData\Roaming\npm-cache\d9a05fab-redux-3-5-2.lock
+50 verbose cache add [ 'redux-thunk@^2.1.0', null ]
+51 verbose cache add name=undefined spec="redux-thunk@^2.1.0" args=["redux-thunk@^2.1.0",null]
+52 verbose parsed url { protocol: null,
+52 verbose parsed url   slashes: null,
+52 verbose parsed url   auth: null,
+52 verbose parsed url   host: null,
+52 verbose parsed url   port: null,
+52 verbose parsed url   hostname: null,
+52 verbose parsed url   hash: null,
+52 verbose parsed url   search: null,
+52 verbose parsed url   query: null,
+52 verbose parsed url   pathname: 'redux-thunk@^2.1.0',
+52 verbose parsed url   path: 'redux-thunk@^2.1.0',
+52 verbose parsed url   href: 'redux-thunk@^2.1.0' }
+53 verbose cache add name="redux-thunk" spec="^2.1.0" args=["redux-thunk","^2.1.0"]
+54 verbose parsed url { protocol: null,
+54 verbose parsed url   slashes: null,
+54 verbose parsed url   auth: null,
+54 verbose parsed url   host: null,
+54 verbose parsed url   port: null,
+54 verbose parsed url   hostname: null,
+54 verbose parsed url   hash: null,
+54 verbose parsed url   search: null,
+54 verbose parsed url   query: null,
+54 verbose parsed url   pathname: '^2.1.0',
+54 verbose parsed url   path: '^2.1.0',
+54 verbose parsed url   href: '^2.1.0' }
+55 verbose addNamed [ 'redux-thunk', '^2.1.0' ]
+56 verbose addNamed [ null, '>=2.1.0-0 <3.0.0-0' ]
+57 silly lockFile e01e2e94-redux-thunk-2-1-0 redux-thunk@^2.1.0
+58 verbose lock redux-thunk@^2.1.0 d:\Users\luhb\AppData\Roaming\npm-cache\e01e2e94-redux-thunk-2-1-0.lock
+59 verbose cache add [ 'redux-logger@^2.6.1', null ]
+60 verbose cache add name=undefined spec="redux-logger@^2.6.1" args=["redux-logger@^2.6.1",null]
+61 verbose parsed url { protocol: null,
+61 verbose parsed url   slashes: null,
+61 verbose parsed url   auth: null,
+61 verbose parsed url   host: null,
+61 verbose parsed url   port: null,
+61 verbose parsed url   hostname: null,
+61 verbose parsed url   hash: null,
+61 verbose parsed url   search: null,
+61 verbose parsed url   query: null,
+61 verbose parsed url   pathname: 'redux-logger@^2.6.1',
+61 verbose parsed url   path: 'redux-logger@^2.6.1',
+61 verbose parsed url   href: 'redux-logger@^2.6.1' }
+62 verbose cache add name="redux-logger" spec="^2.6.1" args=["redux-logger","^2.6.1"]
+63 verbose parsed url { protocol: null,
+63 verbose parsed url   slashes: null,
+63 verbose parsed url   auth: null,
+63 verbose parsed url   host: null,
+63 verbose parsed url   port: null,
+63 verbose parsed url   hostname: null,
+63 verbose parsed url   hash: null,
+63 verbose parsed url   search: null,
+63 verbose parsed url   query: null,
+63 verbose parsed url   pathname: '^2.6.1',
+63 verbose parsed url   path: '^2.6.1',
+63 verbose parsed url   href: '^2.6.1' }
+64 verbose addNamed [ 'redux-logger', '^2.6.1' ]
+65 verbose addNamed [ null, '>=2.6.1-0 <3.0.0-0' ]
+66 silly lockFile 20975062-redux-logger-2-6-1 redux-logger@^2.6.1
+67 verbose lock redux-logger@^2.6.1 d:\Users\luhb\AppData\Roaming\npm-cache\20975062-redux-logger-2-6-1.lock
+68 verbose cache add name="ctrip/crn" spec="0.0.52" args=["ctrip/crn","0.0.52"]
+69 verbose parsed url { protocol: null,
+69 verbose parsed url   slashes: null,
+69 verbose parsed url   auth: null,
+69 verbose parsed url   host: null,
+69 verbose parsed url   port: null,
+69 verbose parsed url   hostname: null,
+69 verbose parsed url   hash: null,
+69 verbose parsed url   search: null,
+69 verbose parsed url   query: null,
+69 verbose parsed url   pathname: '0.0.52',
+69 verbose parsed url   path: '0.0.52',
+69 verbose parsed url   href: '0.0.52' }
+70 verbose addNamed [ 'ctrip/crn', '0.0.52' ]
+71 verbose addNamed [ '0.0.52', '0.0.52' ]
+72 silly lockFile 4c19fe53-ctrip-crn-0-0-52 ctrip/crn@0.0.52
+73 verbose lock ctrip/crn@0.0.52 d:\Users\luhb\AppData\Roaming\npm-cache\4c19fe53-ctrip-crn-0-0-52.lock
+74 silly addNameRange { name: 'react-native',
+74 silly addNameRange   range: '>=0.28.0-0 <0.29.0-0',
+74 silly addNameRange   hasData: false }
+75 silly addNameRange { name: 'react-redux',
+75 silly addNameRange   range: '>=4.4.5-0 <5.0.0-0',
+75 silly addNameRange   hasData: false }
+76 silly addNameRange { name: 'redux', range: '>=3.5.2-0 <4.0.0-0', hasData: false }
+77 silly addNameRange { name: 'redux-thunk',
+77 silly addNameRange   range: '>=2.1.0-0 <3.0.0-0',
+77 silly addNameRange   hasData: false }
+78 silly addNameRange { name: 'react', range: '>=15.1.0-0 <16.0.0-0', hasData: false }
+79 silly addNameRange { name: 'redux-logger',
+79 silly addNameRange   range: '>=2.6.1-0 <3.0.0-0',
+79 silly addNameRange   hasData: false }
+80 verbose url raw react-native
+81 verbose url resolving [ 'https://registry.npmjs.org/', './react-native' ]
+82 verbose url resolved https://registry.npmjs.org/react-native
+83 info trying registry request attempt 1 at 16:06:22
+84 http GET https://registry.npmjs.org/react-native
+85 verbose url raw redux-thunk
+86 verbose url resolving [ 'https://registry.npmjs.org/', './redux-thunk' ]
+87 verbose url resolved https://registry.npmjs.org/redux-thunk
+88 info trying registry request attempt 1 at 16:06:22
+89 http GET https://registry.npmjs.org/redux-thunk
+90 verbose url raw redux-logger
+91 verbose url resolving [ 'https://registry.npmjs.org/', './redux-logger' ]
+92 verbose url resolved https://registry.npmjs.org/redux-logger
+93 info trying registry request attempt 1 at 16:06:22
+94 http GET https://registry.npmjs.org/redux-logger
+95 verbose url raw ctrip/crn/0.0.52
+96 verbose url resolving [ 'https://registry.npmjs.org/', './ctrip/crn/0.0.52' ]
+97 verbose url resolved https://registry.npmjs.org/ctrip/crn/0.0.52
+98 info trying registry request attempt 1 at 16:06:22
+99 http GET https://registry.npmjs.org/ctrip/crn/0.0.52
+100 verbose url raw react-redux
+101 verbose url resolving [ 'https://registry.npmjs.org/', './react-redux' ]
+102 verbose url resolved https://registry.npmjs.org/react-redux
+103 info trying registry request attempt 1 at 16:06:22
+104 verbose etag "675U4B1LOX72YQ46WG9DMBKY4"
+105 http GET https://registry.npmjs.org/react-redux
+106 verbose url raw redux
+107 verbose url resolving [ 'https://registry.npmjs.org/', './redux' ]
+108 verbose url resolved https://registry.npmjs.org/redux
+109 info trying registry request attempt 1 at 16:06:22
+110 verbose etag "55WXA9BKCGZ0Z41Z229VQ71IF"
+111 http GET https://registry.npmjs.org/redux
+112 verbose url raw react
+113 verbose url resolving [ 'https://registry.npmjs.org/', './react' ]
+114 verbose url resolved https://registry.npmjs.org/react
+115 info trying registry request attempt 1 at 16:06:22
+116 verbose etag "5S2P99CVKAQ2I9FE5NEWTLIU7"
+117 http GET https://registry.npmjs.org/react
+118 http 200 https://registry.npmjs.org/redux-thunk
+119 silly registry.get cb [ 200,
+119 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+119 silly registry.get     etag: '"35MS372RB77OOT3KDJ8CRJE3A"',
+119 silly registry.get     'content-type': 'application/json',
+119 silly registry.get     'content-encoding': 'gzip',
+119 silly registry.get     'cache-control': 'max-age=300',
+119 silly registry.get     'content-length': '6080',
+119 silly registry.get     'accept-ranges': 'bytes',
+119 silly registry.get     date: 'Wed, 17 Aug 2016 08:06:23 GMT',
+119 silly registry.get     via: '1.1 varnish',
+119 silly registry.get     age: '192',
+119 silly registry.get     connection: 'keep-alive',
+119 silly registry.get     'x-served-by': 'cache-itm7424-ITM',
+119 silly registry.get     'x-cache': 'HIT',
+119 silly registry.get     'x-cache-hits': '2',
+119 silly registry.get     'x-timer': 'S1471421183.755601,VS0,VE0',
+119 silly registry.get     vary: 'Accept-Encoding' } ]
+120 silly addNameRange number 2 { name: 'redux-thunk',
+120 silly addNameRange   range: '>=2.1.0-0 <3.0.0-0',
+120 silly addNameRange   hasData: true }
+121 silly addNameRange versions [ 'redux-thunk',
+121 silly addNameRange   [ '0.1.0', '1.0.0', '1.0.1', '1.0.2', '1.0.3', '2.0.1', '2.1.0' ] ]
+122 verbose addNamed [ 'redux-thunk', '2.1.0' ]
+123 verbose addNamed [ '2.1.0', '2.1.0' ]
+124 silly lockFile f73a6880-redux-thunk-2-1-0 redux-thunk@2.1.0
+125 verbose lock redux-thunk@2.1.0 d:\Users\luhb\AppData\Roaming\npm-cache\f73a6880-redux-thunk-2-1-0.lock
+126 silly lockFile 8e07ff06-edux-thunk-redux-thunk-2-1-0-tgz https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.1.0.tgz
+127 verbose lock https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.1.0.tgz d:\Users\luhb\AppData\Roaming\npm-cache\8e07ff06-edux-thunk-redux-thunk-2-1-0-tgz.lock
+128 verbose addRemoteTarball [ 'https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.1.0.tgz',
+128 verbose addRemoteTarball   'c724bfee75dbe352da2e3ba9bc14302badd89a98' ]
+129 info retry fetch attempt 1 at 16:06:23
+130 verbose fetch to= d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\tmp.tgz
+131 http GET https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.1.0.tgz
+132 http 200 https://registry.npmjs.org/react-redux
+133 silly registry.get cb [ 200,
+133 silly registry.get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+133 silly registry.get     etag: '"2CTMPIWJY43UQLQSCTQ1335EX"',
+133 silly registry.get     'content-type': 'application/json',
+133 silly registry.get     'content-encoding': 'gzip',
+133 silly registry.get     'cache-control': 'max-age=300',
+133 silly registry.get     'content-length': '13043',
+133 silly registry.get     'accept-ranges': 'bytes',
+133 silly registry.get     date: 'Wed, 17 Aug 2016 08:06:23 GMT',
+133 silly registry.get     via: '1.1 varnish',
+133 silly registry.get     age: '0',
+133 silly registry.get     connection: 'keep-alive',
+133 silly registry.get     'x-served-by': 'cache-itm7427-ITM',
+133 silly registry.get     'x-cache': 'HIT',
+133 silly registry.get     'x-cache-hits': '1',
+133 silly registry.get     'x-timer': 'S1471421183.789828,VS0,VE135',
+133 silly registry.get     vary: 'Accept-Encoding' } ]
+134 silly addNameRange number 2 { name: 'react-redux',
+134 silly addNameRange   range: '>=4.4.5-0 <5.0.0-0',
+134 silly addNameRange   hasData: true }
+135 silly addNameRange versions [ 'react-redux',
+135 silly addNameRange   [ '0.1.0',
+135 silly addNameRange     '1.0.0-alpha',
+135 silly addNameRange     '0.2.0',
+135 silly addNameRange     '0.2.1',
+135 silly addNameRange     '0.2.2',
+135 silly addNameRange     '0.3.0',
+135 silly addNameRange     '0.4.0',
+135 silly addNameRange     '0.5.0',
+135 silly addNameRange     '0.5.1',
+135 silly addNameRange     '0.5.2',
+135 silly addNameRange     '0.5.3',
+135 silly addNameRange     '0.6.0',
+135 silly addNameRange     '0.7.0',
+135 silly addNameRange     '0.8.0',
+135 silly addNameRange     '0.8.1',
+135 silly addNameRange     '0.8.2',
+135 silly addNameRange     '0.9.0',
+135 silly addNameRange     '1.0.0',
+135 silly addNameRange     '1.0.1',
+135 silly addNameRange     '2.0.0',
+135 silly addNameRange     '2.1.0',
+135 silly addNameRange     '2.1.1',
+135 silly addNameRange     '2.1.2',
+135 silly addNameRange     '3.0.0-alpha',
+135 silly addNameRange     '3.0.0',
+135 silly addNameRange     '3.0.1',
+135 silly addNameRange     '3.1.0',
+135 silly addNameRange     '4.0.0',
+135 silly addNameRange     '3.1.1',
+135 silly addNameRange     '4.0.1',
+135 silly addNameRange     '3.1.2',
+135 silly addNameRange     '4.0.2',
+135 silly addNameRange     '4.0.3',
+135 silly addNameRange     '4.0.4',
+135 silly addNameRange     '4.0.5',
+135 silly addNameRange     '4.0.6',
+135 silly addNameRange     '4.1.0',
+135 silly addNameRange     '4.1.1',
+135 silly addNameRange     '4.1.2',
+135 silly addNameRange     '4.2.0',
+135 silly addNameRange     '4.2.1',
+135 silly addNameRange     '4.3.0',
+135 silly addNameRange     '4.4.0',
+135 silly addNameRange     '4.4.1',
+135 silly addNameRange     '4.4.2',
+135 silly addNameRange     '4.4.3',
+135 silly addNameRange     '4.4.4',
+135 silly addNameRange     '4.4.5',
+135 silly addNameRange     '5.0.0-alpha.1' ] ]
+136 verbose addNamed [ 'react-redux', '4.4.5' ]
+137 verbose addNamed [ '4.4.5', '4.4.5' ]
+138 silly lockFile e3d8a654-react-redux-4-4-5 react-redux@4.4.5
+139 verbose lock react-redux@4.4.5 d:\Users\luhb\AppData\Roaming\npm-cache\e3d8a654-react-redux-4-4-5.lock
+140 silly lockFile e3d8a654-react-redux-4-4-5 react-redux@4.4.5
+141 silly lockFile e3d8a654-react-redux-4-4-5 react-redux@4.4.5
+142 silly lockFile 7d70ed6f-react-redux-4-4-5 react-redux@^4.4.5
+143 silly lockFile 7d70ed6f-react-redux-4-4-5 react-redux@^4.4.5
+144 http 200 https://registry.npmjs.org/react
+145 silly registry.get cb [ 200,
+145 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+145 silly registry.get     etag: '"DYC7NDU3MJRAIS8FATE6PNG8X"',
+145 silly registry.get     'content-type': 'application/json',
+145 silly registry.get     'content-encoding': 'gzip',
+145 silly registry.get     'cache-control': 'max-age=300',
+145 silly registry.get     'content-length': '14111',
+145 silly registry.get     'accept-ranges': 'bytes',
+145 silly registry.get     date: 'Wed, 17 Aug 2016 08:06:24 GMT',
+145 silly registry.get     via: '1.1 varnish',
+145 silly registry.get     age: '22',
+145 silly registry.get     connection: 'keep-alive',
+145 silly registry.get     'x-served-by': 'cache-itm7427-ITM',
+145 silly registry.get     'x-cache': 'HIT',
+145 silly registry.get     'x-cache-hits': '1',
+145 silly registry.get     'x-timer': 'S1471421184.158672,VS0,VE0',
+145 silly registry.get     vary: 'Accept-Encoding' } ]
+146 http 200 https://registry.npmjs.org/redux
+147 silly registry.get cb [ 200,
+147 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+147 silly registry.get     etag: '"2RWJX0G5TGYLJ85B64Z86QRYW"',
+147 silly registry.get     'content-type': 'application/json',
+147 silly registry.get     'content-encoding': 'gzip',
+147 silly registry.get     'cache-control': 'max-age=300',
+147 silly registry.get     'content-length': '19639',
+147 silly registry.get     'accept-ranges': 'bytes',
+147 silly registry.get     date: 'Wed, 17 Aug 2016 08:06:23 GMT',
+147 silly registry.get     via: '1.1 varnish',
+147 silly registry.get     age: '191',
+147 silly registry.get     connection: 'keep-alive',
+147 silly registry.get     'x-served-by': 'cache-itm7424-ITM',
+147 silly registry.get     'x-cache': 'HIT',
+147 silly registry.get     'x-cache-hits': '2',
+147 silly registry.get     'x-timer': 'S1471421183.892569,VS0,VE0',
+147 silly registry.get     vary: 'Accept-Encoding' } ]
+148 silly addNameRange number 2 { name: 'react', range: '>=15.1.0-0 <16.0.0-0', hasData: true }
+149 silly addNameRange versions [ 'react',
+149 silly addNameRange   [ '0.0.1',
+149 silly addNameRange     '0.0.2',
+149 silly addNameRange     '0.0.3',
+149 silly addNameRange     '0.1.2',
+149 silly addNameRange     '0.2.0',
+149 silly addNameRange     '0.2.1',
+149 silly addNameRange     '0.2.2',
+149 silly addNameRange     '0.2.3',
+149 silly addNameRange     '0.2.4',
+149 silly addNameRange     '0.2.5',
+149 silly addNameRange     '0.2.6',
+149 silly addNameRange     '0.3.0',
+149 silly addNameRange     '0.3.4',
+149 silly addNameRange     '0.3.5',
+149 silly addNameRange     '0.5.0',
+149 silly addNameRange     '0.5.1',
+149 silly addNameRange     '0.5.2',
+149 silly addNameRange     '0.6.0',
+149 silly addNameRange     '0.6.1',
+149 silly addNameRange     '0.6.2',
+149 silly addNameRange     '0.6.3',
+149 silly addNameRange     '0.7.0',
+149 silly addNameRange     '0.7.1',
+149 silly addNameRange     '0.8.0',
+149 silly addNameRange     '0.9.0-rc1',
+149 silly addNameRange     '0.9.0',
+149 silly addNameRange     '0.10.0-rc1',
+149 silly addNameRange     '0.10.0',
+149 silly addNameRange     '0.11.0-rc1',
+149 silly addNameRange     '0.11.0',
+149 silly addNameRange     '0.11.1',
+149 silly addNameRange     '0.11.2',
+149 silly addNameRange     '0.12.0-rc1',
+149 silly addNameRange     '0.12.0',
+149 silly addNameRange     '0.12.1',
+149 silly addNameRange     '0.12.2',
+149 silly addNameRange     '0.13.0-alpha.1',
+149 silly addNameRange     '0.13.0-alpha.2',
+149 silly addNameRange     '0.13.0-beta.1',
+149 silly addNameRange     '0.13.0-beta.2',
+149 silly addNameRange     '0.13.0-rc1',
+149 silly addNameRange     '0.13.0-rc2',
+149 silly addNameRange     '0.13.0',
+149 silly addNameRange     '0.13.1',
+149 silly addNameRange     '0.13.2',
+149 silly addNameRange     '0.13.3',
+149 silly addNameRange     '0.14.0-alpha1',
+149 silly addNameRange     '0.14.0-alpha2',
+149 silly addNameRange     '0.14.0-alpha3',
+149 silly addNameRange     '0.14.0-beta1',
+149 silly addNameRange     '0.14.0-beta2',
+149 silly addNameRange     '0.14.0-beta3',
+149 silly addNameRange     '0.14.0-rc1',
+149 silly addNameRange     '0.14.0',
+149 silly addNameRange     '0.14.1',
+149 silly addNameRange     '0.14.2',
+149 silly addNameRange     '0.14.3',
+149 silly addNameRange     '0.14.4',
+149 silly addNameRange     '0.14.5',
+149 silly addNameRange     '0.14.6',
+149 silly addNameRange     '0.15.0-alpha.1',
+149 silly addNameRange     '0.14.7',
+149 silly addNameRange     '15.0.0-rc.1',
+149 silly addNameRange     '15.0.0-rc.2',
+149 silly addNameRange     '0.14.8',
+149 silly addNameRange     '15.0.0',
+149 silly addNameRange     '15.0.1',
+149 silly addNameRange     '15.0.2-alpha.1',
+149 silly addNameRange     '15.0.2-alpha.2',
+149 silly addNameRange     '15.0.2-alpha.3',
+149 silly addNameRange     '15.0.2-alpha.4',
+149 silly addNameRange     '15.0.2',
+149 silly addNameRange     '15.0.3-alpha.1',
+149 silly addNameRange     '15.0.3-alpha.2',
+149 silly addNameRange     '15.1.0-alpha.1',
+149 silly addNameRange     '15.1.0',
+149 silly addNameRange     '15.2.0-rc.1',
+149 silly addNameRange     '15.2.0-rc.2',
+149 silly addNameRange     '15.2.0',
+149 silly addNameRange     '15.2.1',
+149 silly addNameRange     '15.3.0-rc.1',
+149 silly addNameRange     '15.3.0-rc.2',
+149 silly addNameRange     '15.3.0-rc.3',
+149 silly addNameRange     '15.3.0',
+149 silly addNameRange     '15.3.1-rc.1',
+149 silly addNameRange     '15.3.1-rc.2' ] ]
+150 verbose addNamed [ 'react', '15.3.0' ]
+151 verbose addNamed [ '15.3.0', '15.3.0' ]
+152 silly lockFile ac324a02-react-15-3-0 react@15.3.0
+153 verbose lock react@15.3.0 d:\Users\luhb\AppData\Roaming\npm-cache\ac324a02-react-15-3-0.lock
+154 http 200 https://registry.npmjs.org/react-native
+155 silly registry.get cb [ 200,
+155 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+155 silly registry.get     etag: '"2PF7DW1I505JQVUK3KQH75CDY"',
+155 silly registry.get     'content-type': 'application/json',
+155 silly registry.get     'content-encoding': 'gzip',
+155 silly registry.get     'cache-control': 'max-age=300',
+155 silly registry.get     'content-length': '43731',
+155 silly registry.get     'accept-ranges': 'bytes',
+155 silly registry.get     date: 'Wed, 17 Aug 2016 08:06:23 GMT',
+155 silly registry.get     via: '1.1 varnish',
+155 silly registry.get     age: '0',
+155 silly registry.get     connection: 'keep-alive',
+155 silly registry.get     'x-served-by': 'cache-itm7423-ITM',
+155 silly registry.get     'x-cache': 'HIT',
+155 silly registry.get     'x-cache-hits': '1',
+155 silly registry.get     'x-timer': 'S1471421183.773423,VS0,VE138',
+155 silly registry.get     vary: 'Accept-Encoding' } ]
+156 silly addNameRange number 2 { name: 'redux', range: '>=3.5.2-0 <4.0.0-0', hasData: true }
+157 silly addNameRange versions [ 'redux',
+157 silly addNameRange   [ '0.0.1',
+157 silly addNameRange     '0.0.2',
+157 silly addNameRange     '0.0.3',
+157 silly addNameRange     '0.0.4',
+157 silly addNameRange     '0.1.0',
+157 silly addNameRange     '0.2.0',
+157 silly addNameRange     '0.2.1',
+157 silly addNameRange     '0.2.2',
+157 silly addNameRange     '0.3.0',
+157 silly addNameRange     '0.3.1',
+157 silly addNameRange     '0.4.0',
+157 silly addNameRange     '0.5.0',
+157 silly addNameRange     '0.5.1',
+157 silly addNameRange     '0.6.0',
+157 silly addNameRange     '0.6.1',
+157 silly addNameRange     '0.6.2',
+157 silly addNameRange     '0.7.0',
+157 silly addNameRange     '0.8.0',
+157 silly addNameRange     '0.8.1',
+157 silly addNameRange     '0.9.0',
+157 silly addNameRange     '0.10.0',
+157 silly addNameRange     '0.10.1',
+157 silly addNameRange     '0.11.0',
+157 silly addNameRange     '0.11.1',
+157 silly addNameRange     '0.12.0',
+157 silly addNameRange     '1.0.0-alpha',
+157 silly addNameRange     '1.0.0-rc',
+157 silly addNameRange     '1.0.0',
+157 silly addNameRange     '1.0.1',
+157 silly addNameRange     '2.0.0',
+157 silly addNameRange     '3.0.0',
+157 silly addNameRange     '3.0.1',
+157 silly addNameRange     '3.0.2',
+157 silly addNameRange     '3.0.3',
+157 silly addNameRange     '3.0.4',
+157 silly addNameRange     '3.0.5',
+157 silly addNameRange     '3.0.6',
+157 silly addNameRange     '3.1.0',
+157 silly addNameRange     '3.1.1',
+157 silly addNameRange     '3.1.2',
+157 silly addNameRange     '3.1.3',
+157 silly addNameRange     '3.1.4',
+157 silly addNameRange     '3.1.5',
+157 silly addNameRange     '3.1.6',
+157 silly addNameRange     '3.1.7',
+157 silly addNameRange     '3.2.0',
+157 silly addNameRange     '3.2.1',
+157 silly addNameRange     '3.3.0',
+157 silly addNameRange     '3.3.1',
+157 silly addNameRange     '3.4.0',
+157 silly addNameRange     '3.5.0',
+157 silly addNameRange     '3.5.1',
+157 silly addNameRange     '3.5.2' ] ]
+158 verbose addNamed [ 'redux', '3.5.2' ]
+159 verbose addNamed [ '3.5.2', '3.5.2' ]
+160 silly lockFile a1ccc11b-redux-3-5-2 redux@3.5.2
+161 verbose lock redux@3.5.2 d:\Users\luhb\AppData\Roaming\npm-cache\a1ccc11b-redux-3-5-2.lock
+162 silly addNameRange number 2 { name: 'react-native',
+162 silly addNameRange   range: '>=0.28.0-0 <0.29.0-0',
+162 silly addNameRange   hasData: true }
+163 silly addNameRange versions [ 'react-native',
+163 silly addNameRange   [ '0.0.0',
+163 silly addNameRange     '0.0.5',
+163 silly addNameRange     '0.0.6',
+163 silly addNameRange     '0.1.0',
+163 silly addNameRange     '0.2.0',
+163 silly addNameRange     '0.2.1',
+163 silly addNameRange     '0.3.0',
+163 silly addNameRange     '0.3.1',
+163 silly addNameRange     '0.3.2',
+163 silly addNameRange     '0.3.3',
+163 silly addNameRange     '0.3.4',
+163 silly addNameRange     '0.3.5',
+163 silly addNameRange     '0.3.6',
+163 silly addNameRange     '0.3.7',
+163 silly addNameRange     '0.3.8',
+163 silly addNameRange     '0.3.9',
+163 silly addNameRange     '0.3.10',
+163 silly addNameRange     '0.3.11',
+163 silly addNameRange     '0.4.0',
+163 silly addNameRange     '0.4.1',
+163 silly addNameRange     '0.4.2',
+163 silly addNameRange     '0.4.3',
+163 silly addNameRange     '0.4.4',
+163 silly addNameRange     '0.5.0-rc1',
+163 silly addNameRange     '0.5.0',
+163 silly addNameRange     '0.6.0-rc',
+163 silly addNameRange     '0.6.0',
+163 silly addNameRange     '0.7.0-rc',
+163 silly addNameRange     '0.7.0-rc.2',
+163 silly addNameRange     '0.7.1',
+163 silly addNameRange     '0.8.0-rc',
+163 silly addNameRange     '0.8.0-rc.2',
+163 silly addNameRange     '0.8.0',
+163 silly addNameRange     '0.9.0-rc',
+163 silly addNameRange     '0.9.0',
+163 silly addNameRange     '0.10.0-rc',
+163 silly addNameRange     '0.10.0',
+163 silly addNameRange     '0.11.0-rc',
+163 silly addNameRange     '0.10.1',
+163 silly addNameRange     '0.11.0',
+163 silly addNameRange     '0.11.1',
+163 silly addNameRange     '0.11.2',
+163 silly addNameRange     '0.12.0-rc',
+163 silly addNameRange     '0.11.3',
+163 silly addNameRange     '0.11.4',
+163 silly addNameRange     '0.12.0',
+163 silly addNameRange     '0.13.0-rc',
+163 silly addNameRange     '0.13.0',
+163 silly addNameRange     '0.13.1',
+163 silly addNameRange     '0.13.2',
+163 silly addNameRange     '0.14.0-rc',
+163 silly addNameRange     '0.14.0',
+163 silly addNameRange     '0.14.1',
+163 silly addNameRange     '0.15.0-rc',
+163 silly addNameRange     '0.14.2',
+163 silly addNameRange     '0.15.0',
+163 silly addNameRange     '0.16.0-rc',
+163 silly addNameRange     '0.16.0',
+163 silly addNameRange     '0.17.0-rc',
+163 silly addNameRange     '0.17.0',
+163 silly addNameRange     '0.18.0-rc',
+163 silly addNameRange     '0.18.0',
+163 silly addNameRange     '0.18.1',
+163 silly addNameRange     '0.19.0-rc',
+163 silly addNameRange     '0.19.0',
+163 silly addNameRange     '0.20.0-rc1',
+163 silly addNameRange     '0.20.0',
+163 silly addNameRange     '0.21.0-rc',
+163 silly addNameRange     '0.21.0',
+163 silly addNameRange     '0.22.0-rc',
+163 silly addNameRange     '0.22.0-rc3',
+163 silly addNameRange     '0.22.0-rc4',
+163 silly addNameRange     '0.22.0-rc5',
+163 silly addNameRange     '0.22.0',
+163 silly addNameRange     '0.22.1',
+163 silly addNameRange     '0.22.2',
+163 silly addNameRange     '0.23.0-rc1',
+163 silly addNameRange     '0.23.0-rc3',
+163 silly addNameRange     '0.23.0-rc4',
+163 silly addNameRange     '0.24.0-rc',
+163 silly addNameRange     '0.24.0-rc1',
+163 silly addNameRange     '0.23.0',
+163 silly addNameRange     '0.24.0-rc2',
+163 silly addNameRange     '0.24.0-rc3',
+163 silly addNameRange     '0.23.1',
+163 silly addNameRange     '0.24.0-rc4',
+163 silly addNameRange     '0.24.0-rc5',
+163 silly addNameRange     '0.25.0-rc',
+163 silly addNameRange     '0.24.0',
+163 silly addNameRange     '0.24.1',
+163 silly addNameRange     '0.26.0-rc',
+163 silly addNameRange     '0.25.1',
+163 silly addNameRange     '0.26.0',
+163 silly addNameRange     '0.27.0-rc',
+163 silly addNameRange     '0.26.1',
+163 silly addNameRange     '0.26.2',
+163 silly addNameRange     '0.27.0-rc1',
+163 silly addNameRange     '0.27.0-rc2',
+163 silly addNameRange     '0.26.3',
+163 silly addNameRange     '0.27.0-rc3',
+163 silly addNameRange     '0.27.0',
+163 silly addNameRange     '0.28.0-rc.0',
+163 silly addNameRange     '0.27.1',
+163 silly addNameRange     '0.27.2',
+163 silly addNameRange     '0.28.0',
+163 silly addNameRange     '0.29.0-rc.0',
+163 silly addNameRange     '0.29.0-rc.1',
+163 silly addNameRange     '0.29.0-rc.2',
+163 silly addNameRange     '0.29.0-rc.3',
+163 silly addNameRange     '0.30.0-rc.0',
+163 silly addNameRange     '0.29.0',
+163 silly addNameRange     '0.29.1',
+163 silly addNameRange     '0.29.2',
+163 silly addNameRange     '0.30.0',
+163 silly addNameRange     '0.31.0-rc.0',
+163 silly addNameRange     '0.31.0-rc.1',
+163 silly addNameRange     '0.31.0',
+163 silly addNameRange     '0.32.0-rc.0' ] ]
+164 verbose addNamed [ 'react-native', '0.28.0' ]
+165 verbose addNamed [ '0.28.0', '0.28.0' ]
+166 silly lockFile 41f0f83e-react-native-0-28-0 react-native@0.28.0
+167 verbose lock react-native@0.28.0 d:\Users\luhb\AppData\Roaming\npm-cache\41f0f83e-react-native-0-28-0.lock
+168 silly lockFile 220c6f13-t-native-react-native-0-28-0-tgz https://registry.npmjs.org/react-native/-/react-native-0.28.0.tgz
+169 verbose lock https://registry.npmjs.org/react-native/-/react-native-0.28.0.tgz d:\Users\luhb\AppData\Roaming\npm-cache\220c6f13-t-native-react-native-0-28-0-tgz.lock
+170 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-native/-/react-native-0.28.0.tgz',
+170 verbose addRemoteTarball   'a68f0c7167fe8fc4da310a7e5af5776d9ee79a51' ]
+171 info retry fetch attempt 1 at 16:06:24
+172 verbose fetch to= d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421184447-0.17133714514784515\tmp.tgz
+173 http GET https://registry.npmjs.org/react-native/-/react-native-0.28.0.tgz
+174 http 200 https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.1.0.tgz
+175 silly lockFile ac324a02-react-15-3-0 react@15.3.0
+176 silly lockFile ac324a02-react-15-3-0 react@15.3.0
+177 silly lockFile 1469480c-react-15-1-0 react@^15.1.0
+178 silly lockFile 1469480c-react-15-1-0 react@^15.1.0
+179 verbose tar unpack d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\tmp.tgz
+180 silly lockFile e655bbc2-83896-0-4951467006467283-package tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package
+181 verbose lock tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package d:\Users\luhb\AppData\Roaming\npm-cache\e655bbc2-83896-0-4951467006467283-package.lock
+182 silly lockFile ec01095e-83896-0-4951467006467283-tmp-tgz tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\tmp.tgz
+183 verbose lock tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\tmp.tgz d:\Users\luhb\AppData\Roaming\npm-cache\ec01095e-83896-0-4951467006467283-tmp-tgz.lock
+184 silly gunzTarPerm modes [ '755', '644' ]
+185 silly gunzTarPerm extractEntry package.json
+186 silly gunzTarPerm extractEntry README.md
+187 silly gunzTarPerm extractEntry LICENSE.md
+188 silly gunzTarPerm extractEntry es/index.js
+189 silly gunzTarPerm extractEntry lib/index.js
+190 silly gunzTarPerm extractEntry src/index.js
+191 silly gunzTarPerm extractEntry dist/redux-thunk.js
+192 silly gunzTarPerm extractEntry dist/redux-thunk.min.js
+193 silly lockFile a1ccc11b-redux-3-5-2 redux@3.5.2
+194 silly lockFile a1ccc11b-redux-3-5-2 redux@3.5.2
+195 silly lockFile d9a05fab-redux-3-5-2 redux@^3.5.2
+196 silly lockFile d9a05fab-redux-3-5-2 redux@^3.5.2
+197 silly lockFile e655bbc2-83896-0-4951467006467283-package tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package
+198 silly lockFile e655bbc2-83896-0-4951467006467283-package tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package
+199 silly lockFile ec01095e-83896-0-4951467006467283-tmp-tgz tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\tmp.tgz
+200 silly lockFile ec01095e-83896-0-4951467006467283-tmp-tgz tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\tmp.tgz
+201 verbose tar pack [ 'd:\\Users\\luhb\\AppData\\Roaming\\npm-cache\\redux-thunk\\2.1.0\\package.tgz',
+201 verbose tar pack   'd:\\Users\\luhb\\AppData\\Local\\Temp\\npm-8964-rB-TY52c\\1471421183896-0.4951467006467283\\package' ]
+202 verbose tarball d:\Users\luhb\AppData\Roaming\npm-cache\redux-thunk\2.1.0\package.tgz
+203 verbose folder d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package
+204 silly lockFile e655bbc2-83896-0-4951467006467283-package tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package
+205 verbose lock tar://d:\Users\luhb\AppData\Local\Temp\npm-8964-rB-TY52c\1471421183896-0.4951467006467283\package d:\Users\luhb\AppData\Roaming\npm-cache\e655bbc2-83896-0-4951467006467283-package.lock
+206 silly lockFile 8699bb76-he-redux-thunk-2-1-0-package-tgz tar://d:\Users\luhb\AppData\Roaming\npm-cache\redux-thunk\2.1.0\package.tgz
+207 verbose lock tar://d:\Users\luhb\AppData\Roaming\npm-cache\redux-thunk\2.1.0\package.tgz d:\Users\luhb\AppData\Roaming\npm-cache\8699bb76-he-redux-thunk-2-1-0-package-tgz.lock
+208 http 404 https://registry.npmjs.org/ctrip/crn/0.0.52
+209 silly registry.get cb [ 404,
+209 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+209 silly registry.get     'content-type': 'application/json',
+209 silly registry.get     'cache-control': 'max-age=0',
+209 silly registry.get     'content-length': '40',
+209 silly registry.get     'accept-ranges': 'bytes',
+209 silly registry.get     date: 'Wed, 17 Aug 2016 08:06:24 GMT',
+209 silly registry.get     via: '1.1 varnish',
+209 silly registry.get     age: '0',
+209 silly registry.get     connection: 'keep-alive',
+209 silly registry.get     'x-served-by': 'cache-itm7425-ITM',
+209 silly registry.get     'x-cache': 'MISS',
+209 silly registry.get     'x-cache-hits': '0',
+209 silly registry.get     'x-timer': 'S1471421183.756756,VS0,VE757' } ]
+210 silly lockFile 4c19fe53-ctrip-crn-0-0-52 ctrip/crn@0.0.52
+211 silly lockFile 4c19fe53-ctrip-crn-0-0-52 ctrip/crn@0.0.52
+212 error 404 'ctrip' is not in the npm registry.
+212 error 404 You should bug the author to publish it
+212 error 404 It was specified as a dependency of 'hotelrn'
+212 error 404
+212 error 404 Note that you can also install from a
+212 error 404 tarball, folder, or http url, or git url.
+213 error System Windows_NT 6.1.7601
+214 error command "C:\\Program Files (x86)\\Appium\\\\node.exe" "C:\\Program Files (x86)\\Appium\\node_modules\\npm\\bin\\npm-cli.js" "install"
+215 error cwd E:\Lizard
+216 error node -v v0.10.26
+217 error npm -v 1.4.6
+218 error code E404
+219 verbose exit [ 1, true ]

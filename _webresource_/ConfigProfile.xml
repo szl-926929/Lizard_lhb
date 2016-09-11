@@ -1,0 +1,32 @@
+<profile>
+    <environments>
+        <add name="dev" target="dev" iis="ALL" net="ALL" dataCenter="ALL" />
+        <add name="lpt" target="lpt" iis="ALL" net="ALL" dataCenter="ALL" />
+        <add name="fws" target="fws" iis="ALL" net="ALL" dataCenter="ALL" />
+        <add name="fat" target="fat" iis="ALL" net="ALL" dataCenter="ALL" />
+        <add name="uat" target="uat" iis="ALL" net="All" dataCenter="ALL" />
+        <add name="uat_nt" target="uat_nt" iis="ALL" net="All" dataCenter="ALL" />
+        <add name="prod" target="prd" iis="ALL" net="All" dataCenter="ALL" />
+    </environments>
+    <dev>
+        <version>dev</version>
+    </dev>
+    <lpt>
+        <version>lpt</version>
+    </lpt>
+    <fws>
+        <version>fws</version>
+    </fws>
+    <fat>
+        <version>fat</version>
+    </fat>
+    <uat>
+        <version>uat</version>
+    </uat>
+    <uat_nt>
+        <version>uat_nt</version>
+    </uat_nt>
+    <prod>
+        <version>prod</version>
+    </prod>
+</profile>

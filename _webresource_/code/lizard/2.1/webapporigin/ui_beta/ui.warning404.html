@@ -1,0 +1,111 @@
+<div class="head-warning">
+  <style>
+    .head-warning-top {
+      width : 100%
+    }
+    .head-warning-header {
+      height     : 48px;
+      background : #1491c5;
+      position   : relative
+    }
+    .head-warning-header .returnico:active {
+      opacity : .7
+    }
+    .head-warning-header-title {
+      text-align : center;
+      font       : 600 1.286em/2.75 STXihei;
+      color      : #fff
+    }
+    .head-warning-content-icon {
+      text-align : center
+    }
+    .head-warning-content-title {
+      text-align : center;
+      font-size  : 12px
+    }
+    .cui-load-error {
+      width      : 100%;
+      margin     : auto;
+      word-break : break-all;
+      text-align : center;
+      margin-top : 85px
+    }
+    .cui-wifi {
+      width               : 68px;
+      height              : 69px;
+      position            : relative;
+      margin              : 0 auto 5px;
+      background-position : 0 0
+    }
+    .cui-load-fail {
+      margin : 78px 15px
+    }
+    .cui-fail-icon {
+      width               : 38px;
+      height              : 38px;
+      background          : url(//pic.c-ctrip.com/h5/common/comm_bg.png) no-repeat;
+      background-size     : 242px 260px;
+      background-position : 0 -178px;
+      margin-bottom       : 10px
+    }
+    .cui-fail-icon:before {
+      display : none
+    }
+    .cui-btns-retry {
+      display       : inline-block;
+      margin-top    : 15px;
+      background    : #ff9913;
+      line-height   : 44px;
+      color         : #fff;
+      width         : 100%;
+      font-size     : 16px;
+      border-radius : 4px;
+      border        : 1px solid #fff
+    }
+    .cui-btns-retry:active {
+      background-color : #e08000
+    }
+    .cui-glines {
+      border-bottom : #dfdfdf 1px solid;
+      margin        : 15px auto
+    }
+    .cui-btns-tel {
+      width            : 100%;
+      font-size        : 16px;
+      display          : inline-block;
+      background-color : #fff;
+      color            : #099fde;
+      border           : 1px solid #dbdbdb;
+      line-height      : 44px;
+      border-radius    : 4px;
+      margin-top       : 15px;
+      text-decoration  : none
+    }
+    .cui-btns-tel:active {
+      background-color : #e6e6e6
+    }
+  </style>
+  <div class="head-warning-padding">
+    <div class="head-warning-content">
+      <div class="cui-load-fail cui-text-center">
+        <div class="cui-load-error">
+          <div class="cui-i cui-wifi cui-fail-icon">
+          </div>
+        </div>
+        <p class="cui-gray">
+          <%=loadFail %></p>
+        <button type="button" class="cui-btns-retry">
+          <%=tryAgain %></button>
+        <%if(showContact) { %>
+          <div class="cui-404-tel">
+            <div class="cui-glines">
+            </div>
+            <p class="cui-grayc">
+              <%=telText %></p>
+            <span  class="cui-btns-tel"><span class="cui-i cui-warning-kf"></span><%=contact %></span></div>
+        <% } %>
+      </div>
+
+    </div>
+  </div>
+</div>

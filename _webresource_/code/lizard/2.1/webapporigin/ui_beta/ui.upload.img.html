@@ -1,0 +1,13 @@
+<style>
+    .ui-upload-wrapper {
+        position: relative;
+    }
+</style>
+<div class="ui-upload-wrapper">
+    <div class="">
+        <%=typeof buttonFn == 'function' && buttonFn()%>
+        <%=typeof fileFn == 'function' && fileFn()%>
+    </div>
+    <ul class="ui-upload-list">
+    </ul>
+</div>

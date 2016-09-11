@@ -1,0 +1,30 @@
+{
+  "name": "ctrip-lizart-ant",
+
+  "root_dir"       : "../",
+  "default_version": "2.1",
+  "all_versions"   : ["2.0", "2.1","2.2"],
+
+  "version"        : "0.1.0",
+  "description"    : "Grunt编译Lizard",
+  "license"        : "MIT",
+  "devDependencies": {
+    "grunt"                  : "~0.4.1",
+    "grunt-contrib-jshint"   : "^0.11.2",
+    "grunt-contrib-uglify"   : "~0.2.1",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-copy"     : "~0.4.1",
+    "grunt-contrib-clean"    : "~0.5.0",
+    "grunt-strip"            : "~0.2.1",
+    "grunt-contrib-compress" : "~0.5.2",
+    "grunt-curl "            : "~2.0.2",
+    "grunt-replace"          : "~0.6.1",
+    "file-system"            : "~2.1.0",
+    "@ctrip/grunt-contrib-imagemin" : "~1.0.0",
+    "grunt-shell"            : "~1.1.1",
+    "underscore"             : "~1.7.0",
+    "uglify-js"              : "~2.4.16",
+    "clean-css"              : "~3.0.8",
+    "strip-comment"          : "~1.0.6"
+  }
+}

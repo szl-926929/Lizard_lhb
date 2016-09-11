@@ -1,0 +1,25 @@
+{
+  "rc": 200,
+  "rmsg": "数据返回成功",
+  "wocount": 0,
+  "favtotal": 0,
+  "useful": {
+    "usernum": 8,
+    "ttime": "2016-06-22 18:06:16"
+  },
+  "ResponseStatus": {
+    "Timestamp": "2016-06-22 18:06:16",
+    "Ack": 0,
+    "Errors": [],
+    "Extension": [
+      {
+        "Id": "CLOGGING_TRACE_ID",
+        "Value": "5637582945055584786"
+      },
+      {
+        "Id": "auth",
+        "Value": "8922C57FAD6E8A701093070E8BC84A0A866E1FE342379240209A6116F534546D"
+      }
+    ]
+  }
+}

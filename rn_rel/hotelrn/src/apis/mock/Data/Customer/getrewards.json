@@ -1,0 +1,40 @@
+{
+  "ResponseStatus": {
+    "Timestamp": "2016-06-17 17:07:50",
+    "Ack": 0,
+    "Errors": [],
+    "Extension": [
+      {
+        "Id": "CLOGGING_TRACE_ID",
+        "Value": "8539601674684644424"
+      },
+      {
+        "Id": "auth",
+        "Value": "DA30F2E457CC7B20F4FB4E4182A617C26A7FD76D48798EC86AA797CA1BD5882A"
+      }
+    ]
+  },
+  "freenight": {
+    "crnum":7,
+    "canum":3,
+    "anum":17,
+    "ncount":9,
+    "nights":[
+      {
+        "amount":287,
+        "status":1,
+        "expdate":"2016-6-30"
+      },
+      {
+        "amount":287,
+        "status":2,
+        "expdate":"2016-6-30"
+      },
+      {
+        "amount":287,
+        "status":3,
+        "expdate":"2016-6-30"
+      }
+    ]
+  }
+}

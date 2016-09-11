@@ -1,0 +1,322 @@
+<style>
+  .picture_wrap,
+  .picture_wrap *,
+  .type_list,
+  .type_list *,
+  .header,
+  .header .back:after,
+  .header .share:after,
+  .picture_show,
+  .picture_show .detail {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 3;
+  }
+  .picture_view_title {
+    height: 44px;
+    padding: 0 10px;
+    background-color: rgba(255,255,255,.8);
+  }
+  .header h3 {
+    padding: 0 44px;
+    line-height: 44px;
+    text-align: center;
+  }
+  .header .back,
+  .header .share,
+  .header .download {
+    float: left;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    line-height: 99em;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 50%;
+  }
+  .picture_view_title .back {
+    margin-top: 5px;
+  }
+  .picture_view_title .download {
+    display: none;
+  }
+  .picture_view_title .back {
+    background: none;
+  }
+  .header .download {
+    float: right;
+    margin-left: 10px;
+
+  }
+  .header .back:after {
+    position: absolute;
+    right: 5px;
+    top: 24%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-top: -1px;
+    vertical-align: middle;
+    content: "";
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -webkit-transform: rotateZ(-135deg) rotateY(-1deg);
+    transform: rotateZ(-135deg) rotateY(-1deg);
+    -webkit-transform: rotateZ(-135deg) rotateY(-1deg) translateY(-50%);
+    transform: rotateZ(-135deg) rotateY(-1deg) translateY(-50%);
+  }
+  .picture_view_title .back:after {
+    border-top: 2px solid #2595E3;
+    border-right: 2px solid #2595E3;
+  }
+
+  .header .download:after {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 20px;
+    height: 18px;
+    overflow: hidden;
+    content: "";
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAkCAYAAAB/up84AAADRUlEQVR42u2a4WccQRTAQyjhCGU5lhBCKCWEUsoRSgilHKGEUkoJ+RSOUsoRSin9A0oI4QjlKKWE+xRCyaeyhBBCOEIpIUzf0zft62RvZ2Z3dnfuzOPJ5eZ29t3+Zt57895NTQXJJUKI16A3oO/GzfBPoI0JBPJL/JOZcTIc5Qfo0oQB4TLrevIYdB/0XNjJNwvDr0E3AxD9xIugQ5FPvlgajvIZ9G4AMnriHk16CPqgRMM3QH/Sa9yJjwKQ9ImvaNJmCUZH0mL6fwH0mN7CDOUN6HQAkjKxw1jUQVemZCGCfeYOpopsCHdmHIA4BILuB7SfFWxSrlkFvaRh/LsWgBQEwrIzwdwQ7o5tgrSsub4J+pVd/wF3UACSAwhc0mZB+orcUJTThg6lxYJizEIAYv8AnaaxmOGBntKcCHojALGDgSt6y6Edy6AJA/K8hoc8i/cFvecSCM4H+tIInA0Q+Ng6ixVthw9im7ms73hYrWnV99lia7sAQq5dfre+MyAUwOWZZcvRA4goCZDysc6gDvfeU0o97SJAFBgoey6ByNXT02z5dcqWBqAnGWnvY9ALGsbSzRMP4kLM4lgmFB2QFBinRuctEyCUwkrfHqeMP6QSzLXuHEIHwx02NPDpYGgKJQtIbhgWQOTu6Crv36eTNjf+APQVaIvOGbx0Mg96xOLQWx9LJyZQRgEpBMMECNWfBJVCIrbKu/RQ5U0309JfZtgzpbjY8jytncuCkgZkBIw5p2kvreK/sYMC8SEzspvVMUvxXv28B0ifoKhAnMAwBCID81OCkbAu4KLp/LpzCza7TBpevkBRgLxwAkMHBHvh5JZuCMYRq9A2LOZPDOpazqrOFUERSg2vOAwDICs0fEIrWBCUGYv5d03g+QyEQTnTdFDPCsEwANJRVkBSlv/3HYgBlOIwDIDsKttyqcQv6z2QDChuYBgAGbCbvq+ielplldYRlPOiMP6zSQMkYf2ORgByC8rAxc6wAXJZxe4YRyCl2aQBItO7VgDiBxApUQDiAZA6jApAAhDvgMguYFyjQbHstwQgf/oXglqpzRqMabI27kGVX95Hkb+IGHpgy9Dk1x4TD4S5jB7rcVcpF3TvuGr34KP8BjcnvtjOed8bAAAAAElFTkSuQmCC') -30px 0 no-repeat;
+    -webkit-background-size:50px 18px;
+    background-size:50px 18px;
+  }
+
+  .type_list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 44px;
+    overflow: hidden;
+    padding: 0 10px;
+    line-height: 44px;
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 30000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-origin: 0% 0%;
+    transform: translate3d(0, 0, 0);
+    transform-origin: 0% 0%;
+
+  }
+  .type_list a {
+    float: left;
+    height: 44px;
+    overflow: hidden;
+    line-height: 44px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,.5);
+    width: 75px;
+    text-align: center;
+  }
+  .type_list a.current {
+    color: #fff;
+  }
+  .type_list_justify .type_box {
+    width: 100%;
+    text-align: justify;
+  }
+  .type_list_justify .type_box:after{
+    content:'';
+    width:100%;
+    height:0;
+    display:inline-block;
+    overflow:hidden;
+    font-size:0;
+  }
+  .type_list_justify .type_box a {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+  }
+  .type_list_nowrap {
+    white-space: nowrap;
+  }
+  .type_list_nowrap a {
+    float: none;
+    display: inline-block;
+    padding: 0 8px;
+  }
+  .picture_view_title ~ .picture_wrap {
+    top: 35px;
+  }
+  .picture_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    z-index: 1;
+  }
+  .picture_list a {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    text-align: center;
+    border: 5px solid #fff;
+    background-color: #f0f0f0;
+  }
+  .picture_list a span {
+    position: relative;
+    display: block;
+    padding-bottom: 75%;
+    height: 0;
+  }
+  .picture_list a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media all and (orientation : landscape){
+    .picture_list a {
+      width: 33.3333%;
+    }
+  }
+
+  .picture_show_list li:after {
+    position: absolute;
+    bottom: 44px;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+    content: "";
+  }
+  .picture_show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+    z-index: 1;
+  }
+  .picture_show .show_box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .picture_show .detail {
+    position: absolute;
+    bottom: 44px;
+    left: 0;
+    width: 100%;
+    height: 89px;
+    padding: 10px 10px 0;
+    color: #fff;
+    z-index: 3;
+  }
+  .no_type_list .picture_show .detail {
+    bottom: 0;
+  }
+  .no_type_list ~ .type_list {
+    display: none;
+  }
+  .no_type_list li.picture_show:after {
+    bottom: 0;
+  }
+  .picture_show .detail h3 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 65%;
+    height: 34px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow:1px 1px 1px rgba(0,0,0,1);
+    opacity: .8;
+  }
+  .picture_show .detail p {
+    position: absolute;
+    top: 44px;
+    left: 10px;
+    right: 10px;
+    height: 35px;
+    overflow: hidden;
+    line-height: 1.4;
+    font-size: 14px;
+    text-shadow:1px 1px 0 rgba(0,0,0,.5);
+    opacity: .8;
+  }
+  @media all and (orientation : landscape) {
+    .picture_show .detail {
+      height: 64px;
+    }
+    .picture_show .detail p {
+      height: 20px;
+    }
+    .picture_show .detail {
+      bottom: 10px;
+    }
+    .type_list {
+      display: none;
+    }
+  }
+  .picture_show .picture_number {
+    position: absolute;
+    top: 8px;
+    right: 7px;
+    padding: 2px 12px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    border-radius: 50px;
+    opacity: .8;
+  }
+  .picture_show .picture_number em {
+    margin-right: 4px;
+    font-style: normal;
+    font-size: 17px;
+  }
+</style>
+<div class="header <%=isThumbnail?'picture_view_title':''%>" style="width: <%=document.body.offsetWidth%>px">
+  <span class="back">返回</span>
+  <span class="download" >下载</span>
+  <h3 class="pb_amount_notice">共<%=list.length%>张</h3>
+</div>
+<div class="picture_wrap">
+  <div class="picture_list">
+    <%for(var i = 0; i < list.length; i++){%>
+    <a data-target="<%= list[i].category%>" data-category-index="<%=list[i].category_index%>" data-index="<%=list[i].index%>">
+        <span>
+            <img src="<%=list[i].imageThumbnailUrl || list[i].imageUrl%>" alt="<%=list[i].imageTitle%>"/>
+            <%=typeof thumbnailFn == 'function' && thumbnailFn(list[i])%>
+        </span>
+    </a>
+    <%}%>
+  </div>
+</div>
+<%var tabCount = Object.getOwnPropertyNames(tabs).length;%>
+<%if(tabCount < 5) {var tabWidth = document.body.offsetWidth/tabCount + 'px'}%>
+<div class="slider-wheel" style="height: <%=document.body.offsetHeight%>px;width: <%=document.body.offsetWidth%>px;overflow: hidden">
+  <ul id="pb_slider_group" class="picture_show_list <%=(tabCount === 1)?'no_type_list':''%>">
+  </ul>
+</div>
+<div class="type_list type_list_nowrap" style="display: <%=(tabCount == 1)? 'none': 'block'%>">
+  <div class="type_box">
+    <%for(var obj in tabs){%>
+    <a href="#" class="<%=(obj==='全部')? 'current':''%>" style="width: <%=tabWidth%>" data-filter="<%=obj%>"><%=obj%></a>
+    <%}%>
+  </div>
+</div>

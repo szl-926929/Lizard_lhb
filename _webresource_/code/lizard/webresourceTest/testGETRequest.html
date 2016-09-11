@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<div id="context"></div>
+<script type="text/javascript">
+    setInterval(function(){
+        getSeedLastModify("http://webresource.c-ctrip.com/code/lizard/2.2/web/lizard.seed.js?version=sdasd1");
+    },2000);
+    function getSeedLastModify(url) {
+        var xmlHttp;
+        var requestType = "";
+        function createXMLHttpRequest() {
+            if (window.ActiveXObject) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } else if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            }
+        }
+
+        function doHeaderRequest(request, url) {
+            requestType = request;
+            createXMLHttpRequest();
+            xmlHttp.onreadystatechange = handleStateChange;
+            xmlHttp.open("GET", url, true);
+            xmlHttp.setRequestHeader('Cache-Control', 'no-cache');
+            xmlHttp.setRequestHeader('Content-Type', 'text/plain');
+            xmlHttp.send(null);
+        }
+
+        doHeaderRequest("lastModified", url);
+        function handleStateChange() {
+            if (xmlHttp.readyState == 4) {
+                if (requestType == "lastModified") {
+                    getLastModified();
+                    getAllResponseHeaders();
+                }
+            }
+            function getLastModified() {
+                try{
+                    var lastModified = new Date(xmlHttp.getResponseHeader("Last-Modified"));
+                    window.localStorage.setItem("SEEDLASTMODIFIED",lastModified.getTime());
+                }catch(e){
+                }
+            }
+            function getAllResponseHeaders() {
+                console.log();
+                var div=document.createElement('div');
+                div.textContent=xmlHttp.getAllResponseHeaders();
+                context.appendChild(div);
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

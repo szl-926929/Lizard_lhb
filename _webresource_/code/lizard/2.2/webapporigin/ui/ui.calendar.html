@@ -1,0 +1,136 @@
+<ul class="cui_cldweek" style=" position: static; ">
+  <style>
+    .cui_cldweek {
+      position      : fixed;
+      z-index       : 2;
+      top           : 48px;
+      left          : 0;
+      width         : 100%;
+      height        : auto;
+      overflow      : hidden;
+      font          : 400 12px/24px verdana;
+      border-bottom : 1px solid #c8c8c8;
+      background    : #f7f7f7
+    }
+    .cui_cldweek_top0 {
+      top : 0
+    }
+    .cui_cldweek li {
+      float      : left;
+      width      : 14%;
+      text-align : center
+    }
+    .cui_cldweek li:first-child, .cui_cldweek li:last-child {
+      width : 15%;
+      color : #ff902d
+    }
+    .cui_cldmonth {
+      height     : 40px;
+      text-align : center;
+      font       : 400 16px/50px verdana;
+      background : #fff
+    }
+    .cui_cldunit {
+      margin-bottom : 14px
+    }
+    .cui_cld_daybox {
+      overflow   : hidden;
+      background : #fff
+    }
+    .cui_cld_daybox li {
+      float      : left;
+      width      : 14%;
+      height     : 40px;
+      padding    : 4px 0;
+      font       : 400 14px/45px verdana;
+      overflow   : hidden;
+      text-align : center
+    }
+    .cui_cld_daybox li:nth-of-type(7n), .cui_cld_daybox li:nth-of-type(7n+1) {
+      width : 15%;
+      color : #ff902d
+    }
+    .cui_cld_dayfuture {
+      background : #fff
+    }
+    .cui_cld_day_nocrtmonth {
+      visibility : hidden
+    }
+    .cui_cld_day_havetxt em, .cui_cld_nopro em, .cui_cld_haspro em, .cui_cld_daycrt em {
+      display     : block;
+      line-height : 20px;
+      font-size   : 12px
+    }
+    .cui_cld_day_havetxt i, .cui_cld_nopro i, .cui_cld_haspro i, .cui_cld_daycrt i {
+      display     : block;
+      line-height : 15px;
+      font-size   : 11px
+    }
+    .cui_cld_daycrt.cui_cld_daycrt_sl em {
+      line-height : inherit
+    }
+    .cui_cld_daybox li.cui_cld_day_hint {
+      color : #06a2d0
+    }
+    .cui_cld_daybox li.cui_cld_daypass {
+      color : #cfcfcf !important
+    }
+    .cui_cld_daycrt {
+      background : #06a2d0;
+      color      : #fff !important
+    }
+  </style>
+<% var i = 0, day1 = 0;  %>
+<%for(day1 = 0; day1 < 7; day1++) { %>
+<li><%=weekDayArr[day1] %></li>
+<%} %>
+</ul>
+
+<section class="cui_cldunit">
+<%
+var changedYear;
+var endDateTime = endDate.getTime();
+ %>
+<%for(var j = 0; j < displayMonthNum; j++) { %>
+<%
+  var changedMonth = month + j;
+  var yyy =  parseInt(( month + j ) / 12);
+  if(changedMonth > 11) { 
+    changedMonth = changedMonth - 12 * yyy;
+  }
+  changedYear = year + yyy;
+  var d = new Date(changedYear, changedMonth);
+  var days = _.dateUtil.getDaysOfMonth(d);
+  var beginWeek = _.dateUtil.getBeginDayOfMouth(d);
+
+  var str_month = MonthClapFn(changedYear, changedMonth);
+%>
+  <%if(str_month.length > 0 ) { %>
+  <h1 class="cui_cldmonth">
+    <%=str_month %>
+  </h1>
+    <% } %>
+  <ul class="cui_cld_daybox">
+     <% for(i = 0; i < beginWeek; i++) { %>
+        <li class="cui_invalid"></li>
+      <% } %>
+      <% for(i = 0; i < days; i++) { %>
+        <% var day = i + 1; %>
+        <% var dateObj = new Date(changedYear, changedMonth, day); %>
+        <% var calendar_time = dateObj.getTime(); %>
+        <% var difftime = calendar_time -curTime; %>
+        <% var _difftime =  -1 * difftime; %>
+        <% var diffHour =  parseInt(_difftime / 3600000 * 100) / 100; %>
+        <% var _diffHour =  parseInt((startTime.getTime() - calendar_time) / 36000) / 100; %>
+
+        <%if(typeof dayWrapperItemFn != 'undefined' && _.isFunction(dayWrapperItemFn)){ %>
+          <%=dayWrapperItemFn(scope, changedYear, changedMonth, day, dateObj, difftime) %>
+        <%} else { %>
+        <% var isSelectDate = (typeof selectDate != "undefined" && _.isDate(selectDate) && selectDate.getTime() == calendar_time ); %>
+        <li data-curTime="<%=diffHour %>" class="cui_calendar_item cui_cld_day_havetxt <%=(isSelectDate?"cui_cld_daycrt":"")%> <%if(_diffHour >= 24 || (endTime && calendar_time > endTime.getTime() )) { %> cui_cld_daypass <%} %>" data-cndate="<%=changedYear%>-<%=changedMonth + 1%>-<%=day%>" data-date="<%=changedYear%>-<%=changedMonth%>-<%=day%>"><%=dayItemFn.call(scope, changedYear, changedMonth, day, dateObj, difftime)%> </li>
+        <%} %>
+
+      <% } %>
+  </ul>
+<%} %>
+</section>

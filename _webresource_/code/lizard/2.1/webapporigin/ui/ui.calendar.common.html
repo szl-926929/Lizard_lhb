@@ -1,0 +1,120 @@
+<style type="text/css">
+  .lh_canlendar_color_hightlight{
+    color: #2E92FF;
+  }
+  .cm-calendar .cm-calendar-hd{
+    top:44px;
+  }
+  .cm-calendar{
+    padding-top: 30px;
+  }
+</style>
+<div class="cm-calendar">
+  <!--add tips-->
+  <% if(tips && !selfTips){ %>
+  <style type="text/css">
+    .cm-calendar .cm-calendar-hd{
+      top:84px;
+    }
+    .cm-calendar{
+      padding-top: 70px;
+    }
+  </style>
+  <p class="cm-calendar_tips"><span><%=tips%></span></p>
+  <% } %>
+  <% if(!tips && selfTips){ %>
+  <%=selfTips%>
+  <% } %>
+
+  <ul class="cm-calendar-hd js_weekend">
+    <% var i = 0, day1 = 0;  %>
+    <%for(day1 = 0; day1 < 7; day1++) { %>
+    <li><%=weekDayArr[day1] %></li>
+    <%} %>
+  </ul>
+
+  <div class="cm-calendar-bd ">
+    <%for(var j = 0; j < displayMonthNum; j++) { %>
+    <%
+    var changedMonth = month + j;
+    var yyy =  parseInt(( month + j ) / 12);
+    if(changedMonth > 11) {
+    changedMonth = changedMonth - 12 * yyy;
+    }
+    changedYear = year + yyy;
+    var d = new Date(changedYear, changedMonth);
+    var days = _.dateUtil.getDaysOfMonth(d);
+    var beginWeek = _.dateUtil.getBeginDayOfMouth(d);
+    var endDateTime = endDate.getTime();
+
+    var str_month = MonthClapFn(changedYear, changedMonth);
+    %>
+    <%if(str_month.length > 0 ) { %>
+    <h3 class="cm-month js_month"><%=str_month %></h3>
+    <% } %>
+    <ul class="cm-day-list">
+      <% for(i = 0; i < beginWeek; i++) { %>
+      <li class="js_empty_day"></li>
+      <% } %>
+      <% for(i = 0; i < days; i++) { %>
+      <% var day = i + 1; %>
+      <% var dateObj = new Date(changedYear, changedMonth, day ); %>
+      <% var calendar_time = dateObj.getTime(); %>
+      <% var difftime = calendar_time -curTime; %>
+      <% var _difftime =  -1 * difftime; %>
+      <% var diffHour =  parseInt(_difftime / 3600000 * 100) / 100; %>
+      <% var _diffHour =  parseInt((startTime.getTime() - calendar_time) / 36000) / 100; %>
+      <!--特殊需求，特别对待-->
+      <!--这段针对li层面修改-->
+      <%if(defineLi){ %>
+      <%
+      var otherData = {
+      diffHour: diffHour,
+      _difftime: _difftime,
+      _diffHour: _diffHour,
+      endTime: endTime,
+      changedMonth: changedMonth,
+      changedYear: changedYear,
+      day: day
+      };
+      %>
+      <%=dayWrapperItemFn.call(scope, changedYear, changedMonth, day, dateObj, difftime, otherData) %>
+      <%} else { %>
+      <li  data-curTime="<%=diffHour %>" class="js_calendar_item <%if(_diffHour >= 24 || (endTime && calendar_time > endTime.getTime() )) { %> js_overdue_day cm-item--disabled <%} %> " data-cndate="<%=changedYear%>-<%=changedMonth + 1%>-<%=day%>" data-date="<%=changedYear%>-<%=changedMonth%>-<%=day%>">
+        <%=dayItemFn.call(scope, changedYear, changedMonth, day, dateObj, difftime)%>
+      </li>
+      <%} %>
+
+      <% } %>
+    </ul>
+    <%} %>
+
+  </div>
+
+  <%if(showNav){%>
+  <!--add footernav-->
+  <div class="cm-calendar-ft">
+    <ul class="cm-calendar-quick-nav">
+      <%if(footNavDate){
+      var count = 0;
+      for(var i in footNavDate){
+      if(count === 0){%>
+      <li class="active js_calendar_item w_date_nav_click" data-date="<%=footNavDate[i]%>"><%=i%></li>
+      <%}else{%>
+      <li class="w_date_nav_click" data-date="<%=footNavDate[i]%>"><%=i%></li>
+      <%}
+      count++;
+      }%>
+      <%}%>
+    </ul>
+  </div>
+  <%}%>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<%filter = filter.replace(/\s+/g, "").split(','); %>
+
+<ul class="cui-city-itmes">
+  <style>
+    .cui-arrow-close .cui-city-n {
+      display : none
+    }
+    .cui-arrow-close .cui-city-t:before, .cui-arrow-close .cui-city-t:after, .cui-arrow-open .cui-city-t:before, .cui-arrow-open .cui-city-t:after {
+      float            : right;
+      content          : "";
+      width            : 2px;
+      height           : 10px;
+      background-color : #aaa;
+      margin           : 5px 4px 0 0
+    }
+    .cui-arrow-close .cui-city-t:before, .cui-arrow-open .cui-city-t:after {
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -ms-transform     : rotate(45deg);
+      -o-transform      : rotate(45deg);
+      transform         : rotate(45deg)
+    }
+    .cui-arrow-close .cui-city-t:after, .cui-arrow-open .cui-city-t:before {
+      -webkit-transform : rotate(-45deg);
+      -moz-transform    : rotate(-45deg);
+      -ms-transform     : rotate(-45deg);
+      -o-transform      : rotate(-45deg);
+      transform         : rotate(-45deg)
+    }
+    .cui-city-itmes .cui-city-t {
+      color            : #666;
+      background-color : #efefef;
+      border-bottom    : #bcbcbc 1px solid;
+      line-height      : 20px;
+      padding          : 5px 10px;
+      display          : block
+    }
+    .cui-city-itmes .cui-city-n {
+      background-color : #fff
+    }
+    .cui-city-itmes .cui-city-n li {
+      border-bottom : #bcbcbc 1px solid;
+      font-size     : 15px;
+      line-height   : 20px;
+      padding       : 10px 30px 10px 10px;
+      word-break    : break-all;
+      color         : #000
+    }
+    .cui-city-itmes .cui-city-n li.current {
+      background      : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAcCAMAAAA+9+1qAAAAP1BMVEUAAAAJn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn94Jn95q8vaOAAAAFHRSTlMAw8/cp5q2BxEDG4zwf3BbSzbmJoL/OqMAAACpSURBVDjLhdNZDoQgEEXRVpkRB6j9r7UtEgK27av60xwCyYWPNGVyogkrzVYwbiEiI5iZrjmgsRObHRpv2Gx4M8UmYhPZaGwSG+Wh2dgYC83OZsbmYLO4YdHTn2zyYBIp/8+s4XbAX1WIpwx/NDU1hL/mbJ9d6Vv4Z1SvqgLhe0cthLdVRRC+L48tfEK3KwnhbT1upUq4zWJ4t1APjxWHxypTDvJrnV7MF34yDmacQrD2AAAAAElFTkSuQmCC) 97% center no-repeat;
+      background-size : 18px 14px
+    }
+  </style>
+<%for(var i = 0, len = data.length; i < len; i++) { %>
+  <li data-groupindex="<%=i %>" class="<%if(typeof data[i].needFold != 'undefined' && data[i].needFold == true) { %>cui-arrow-close<%} else{ %> cui-arrow-open<% } %>" >
+  <span class="cui-city-t">
+   <%=data[i].name %> </span>
+   <%var item = data[i].data; %>
+   <%if(item && item.length > 0) { %>
+    <ul class="cui-city-n">
+
+     <%for(var j = 0, len1 = item.length; j < len1; j++) { %>
+      <li data-index="<%=j %>" data-group="<%=i %>" data-filter="<%for(var k in filter){ var v = filter[k]; if(typeof item[j][v]=='string') { %><%=item[j][v] %> <% } %><% } %>" ><%=item[j].name %> </li>
+     <% } %>
+    </ul>
+
+   <% } %>
+   
+<% } %>
+
+</ul>

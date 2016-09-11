@@ -1,0 +1,75 @@
+<div class="cui-pop-box">
+  <style>
+    .cui-pop-box {
+      background    : #fff;
+      width         : 280px;
+      margin        : auto;
+      position      : relative;
+      overflow      : hidden;
+      border-radius : 3px;
+      z-index       : 9999
+    }
+    .cui-pop-box .cui-hd {
+      height      : 40px;
+      line-height : 40px;
+      font-size   : 1.2em;
+      color       : #fff;
+      background  : #099fde;
+      padding     : 0 10px;
+      position    : relative
+    }
+    .cui-roller-btns {
+      display : -webkit-box;
+      display : -moz-box;
+      display : -ms-flexbox;
+      display : -webkit-flex;
+      display : flex;
+      width   : 100%;
+      -webkit-box-flex : 1;
+      -moz-box-flex    : 1;
+      -webkit-flex     : 1;
+      -ms-flex         : 1;
+      flex             : 1;
+      background         : #fff;
+      border-top         : 1px solid #bcbcbc;
+      line-height        : 18px;
+      text-align         : center;
+      -webkit-box-sizing : border-box;
+      -moz-box-sizing    : border-box;
+      box-sizing         : border-box
+    }
+    .cui-flexbd {
+      -webkit-box-flex : 1;
+      -moz-box-flex    : 1;
+      -webkit-flex     : 1;
+      -ms-flex         : 1;
+      flex             : 1
+    }
+    .cui-roller-btns .cui-flexbd {
+      padding : 12px 0;
+      color   : #099fde
+    }
+    .cui-roller-btns a {
+      color : #099fde
+    }
+    .cui-roller-btns .cui-flexbd:active {
+      opacity : .75
+    }
+    .cui-roller-btns .cui-flexbd:nth-of-type(2) {
+      border-left : 1px solid rgba(0, 0, 0, 0.3)
+    }
+  </style>
+  <div class="cui-hd">
+      <%=title%>
+  </div>
+  <div class="cui-bd">
+    <div class="cui-error-tips">
+      <%=content%></div>
+    <div class="cui-roller-btns">
+      <% for(var i = 0, len = btns.length; i < len; i++ ) {%>
+      <div class="cui-flexbd <%=btns[i].className%>">
+        <%=btns[i].name%></div>
+      <% } %>
+    </div>
+  </div>
+</div>

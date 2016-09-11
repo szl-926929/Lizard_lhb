@@ -1,0 +1,136 @@
+<section class="cm-pop cm-pop--radius <%=wrapperClass %>  <%if(dir == 'up'){ %> <%=upClass %> <% } else { %> <%=downClass %> <% } %>">
+<style>
+  .cm-pop .cm-pop-list li {
+    border-bottom    : 1px solid #dbdbdb;
+    background-color : #fff;
+    line-height      : 33px;
+    padding          : 5px 10px;
+    position         : relative;
+    display          : block;
+    cursor           : pointer
+  }
+  .cm-pop .cm-pop-list li:first-child {
+    border-top : 1px solid #dbdbdb
+  }
+  .cm-pop .cm-pop-list li:active, .cm-pop .cm-pop-list li:hover {
+    background-color : whitesmoke
+  }
+  .cm-pop {
+    position : absolute;
+    z-index  : 985;
+    width    : 100%
+  }
+  .cm-pop .icon-pop-triangle {
+    width             : 10px;
+    height            : 10px;
+    background-color  : #fff;
+    position          : absolute;
+    bottom            : -5px;
+    left              : 50%;
+    margin-left       : -5px;
+    -webkit-transform : rotate(45deg);
+    transform         : rotate(45deg);
+    z-index           : -1
+  }
+  .cm-pop .cm-pop-bd {
+    background-color : #fff
+  }
+  .cm-pop .cm-pop-list li:first-child {
+    border-top : none
+  }
+  .cm-pop .cm-pop-list li:last-child {
+    border-bottom : none
+  }
+  .cm-pop .cm-pop-list li.active, .cm-pop .cm-pop-list li:active, .cm-pop .cm-pop-list li:hover {
+    background-color : #099fde;
+    color            : #fff
+  }
+  .cm-pop .cm-pop-list--checked li {
+    padding-right : 30px
+  }
+  .cm-pop .cm-pop-list--checked li.active {
+    background-color : #fff;
+    color            : #099fde
+  }
+  .cm-pop .cm-pop-list--checked li.active::after {
+    content           : "";
+    width             : 14px;
+    height            : 6px;
+    border-bottom     : 2px solid #099fde;
+    border-left       : 2px solid #099fde;
+    position          : absolute;
+    top               : 50%;
+    right             : 8px;
+    margin-top        : -4px;
+    -webkit-transform : rotate(-45deg) translateY(-50%);
+    transform         : rotate(-45deg) translateY(-50%)
+  }
+  .cm-pop--triangle-up .icon-pop-triangle {
+    top : -5px
+  }
+  .cm-pop--border {
+    border : 1px solid #dbdbdb
+  }
+  .cm-pop--border .icon-pop-triangle {
+    border       : 1px solid #dbdbdb;
+    border-color : #fff #dbdbdb #dbdbdb #fff
+  }
+  .cm-pop--border.cm-pop--triangle-up .icon-pop-triangle {
+    border-color : #dbdbdb #fff #fff #dbdbdb
+  }
+  .cm-pop--border.cm-pop--radius {
+    border-radius : 6px
+  }
+  .cm-pop--radius .cm-pop-bd {
+    border-radius : 4px;
+    overflow      : hidden
+  }
+  .cm-pop--user-nav {
+    top   : 55px;
+    right : 0;
+    color : #fff;
+    width : 128px
+  }
+  .cm-pop--user-nav .icon-pop-triangle {
+    background-color : #283847;
+    left             : auto;
+    right            : 10px
+  }
+  .cm-pop--user-nav .cm-pop-list li {
+    background-color : #283847;
+    border-bottom    : 1px solid rgba(255, 255, 255, 0.2)
+  }
+  .cm-pop--user-nav .cm-pop-list li i[class^="icon-"] {
+    margin-right : 10px
+  }
+  .cm-pop--user-nav .cm-pop-list li:active, .cm-pop--user-nav .cm-pop-list li:hover {
+    background-color : #161e26
+  }
+  .cm-pop--num-keyboard {
+    bottom : 0
+  }
+  .cm-pop--num-keyboard .cm-keyboard-bar {
+    background-color : #e2e2e2;
+    text-align       : right;
+    padding-right    : 10px;
+    height           : 44px;
+    line-height      : 44px;
+    border-top       : 1px solid #dbdbdb
+  }
+  .cm-pop--num-keyboard .cm-keyboard-bar .btn-secondary {
+    line-height : 30px;
+    height      : 30px;
+    padding     : 0 15px
+  }
+</style>
+<i class="icon-pop-triangle"></i>
+<div class="cm-pop-bd">
+  <ul class="cm-pop-list <%=itemStyleClass %>">
+    <% for(var i = 0, len = data.length; i < len; i++) { %>
+    <% var itemData = data[i];%>
+    <li data-index="<%=i%>" data-flag="c" class="<% if(index == i){ %><%=curClass %><%} %>"  ><%if(typeof itemFn == 'function') { %><%=itemFn.call(scope, itemData, i) %> <% } else { %><%=itemData.name%><%} %></li>
+    <% } %>
+  </ul>
+</div>
+</section>
+

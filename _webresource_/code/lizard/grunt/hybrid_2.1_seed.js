@@ -1,0 +1,2 @@
+for(var scripts=document.getElementsByTagName("script")||[],reg=/lizard\.seed\.(src\.)*js.*$/gi,curPath="",i=0;i<scripts.length;i++){var src=scripts[i].getAttribute("src");if(src&&reg.test(src)){var filePath=src.replace(reg,"").replace("2.1","2.2");break}}
+document.write("<script src='"+filePath+"lizard.seed.js'></script>");

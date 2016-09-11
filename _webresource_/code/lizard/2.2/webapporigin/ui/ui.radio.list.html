@@ -1,0 +1,86 @@
+<div class="cui-pop-box">
+  <style>
+    .cui-pop-box {
+      background    : #fff;
+      width         : 280px;
+      margin        : auto;
+      position      : relative;
+      overflow      : hidden;
+      border-radius : 3px;
+      z-index       : 9999
+    }
+    .cui-pop-box .cui-hd {
+      height      : 40px;
+      line-height : 40px;
+      font-size   : 1.2em;
+      color       : #fff;
+      background  : #099fde;
+      padding     : 0 10px;
+      position    : relative
+    }
+    .cui-select-view li {
+      border-bottom : #dfdfdf 1px solid;
+      padding       : 1em 2em 1em 1em;
+      white-space   : nowrap;
+      overflow      : hidden;
+      text-overflow : ellipsis;
+      position      : relative
+    }
+    .cui-select-view li.current {
+      color : #1084bc
+    }
+    .cui-select-view li:active {
+      background : rgba(0, 0, 0, .05)
+    }
+    .cui-select-view li.current:before, .cui-select-view li.current:after {
+      position      : absolute;
+      content       : "";
+      background    : #1084bc;
+      height        : 3px;
+      top           : 50%;
+      border-radius : 3px
+    }
+    .cui-select-view li.current:before {
+      width             : 18px;
+      right             : 10px;
+      margin-top        : -2px;
+      -webkit-transform : rotate(-50deg);
+      -moz-transform    : rotate(-50deg);
+      -ms-transform     : rotate(-50deg);
+      transform         : rotate(-50deg)
+    }
+    .cui-select-view li.current:after {
+      width             : 9px;
+      right             : 22px;
+      margin-top        : 2px;
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -ms-transform     : rotate(45deg);
+      transform         : rotate(45deg)
+    }
+    .cui-bd {
+      color : #000
+    }
+    .cui-roller-bd{
+      -webkit-box-flex : 1;
+      -moz-box-flex    : 1;
+      -webkit-flex     : 1;
+      -ms-flex         : 1;
+      flex             : 1
+    }
+  </style>
+<%if(typeof title == 'string' && title.length > 0){ %>
+  <div class="cui-hd">
+    <div class="cui-text-center">
+      <%=title %></div>
+  </div>
+<%} %>
+
+  <div class="cui-bd cui-roller-bd" style="overflow: hidden; position: relative;">
+    <ul class="cui-select-view " style="position: absolute; width: 100%; ">
+      <%for(var i = 0, len = data.length; i < len; i++) { %>
+        <li data-index="<%=i %>" <%if(i == index){ %>class="current"<%} %> ><%=data[i].name || data[i].id %></li>
+      <% } %>
+    </ul>
+  </div>
+</div>
